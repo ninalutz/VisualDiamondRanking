@@ -35,7 +35,9 @@
         rows.push(row0);
 
         for (var i = 0; i < cells.length; i++) {
-          let row = [i+1, cells[1].childNodes[1].src];
+          let filename = cells[i].childNodes[1].src.split("/");
+          console.log(filename)
+          let row = [i+1, filename[filename.length-1]];
           console.log(row)
           rows.push(row);
           }
