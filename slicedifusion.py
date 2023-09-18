@@ -1,9 +1,13 @@
 import cv2
 
-img = cv2.imread('Person/person.png')
+directory = "Person/" #output directory
+filename = "Person/person.png" #image to cut
+
+img = cv2.imread(filename)
 img2 = img
 
 height, width, channels = img.shape
+
 # Number of pieces Horizontally 
 W_SIZE  = 5 
 # Number of pieces Vertically to each Horizontal  
@@ -21,5 +25,5 @@ for ih in range(H_SIZE ):
       print(x,y,h,w)
       counter+=1
       img = img[int(y):int(y+h), int(x):int(x+w)]
-      cv2.imwrite("Person/" + str(counter) +  ".png",img)
+      cv2.imwrite(directory + str(counter) +  ".png",img)
       img = img2
