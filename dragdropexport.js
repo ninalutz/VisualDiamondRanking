@@ -25,11 +25,13 @@ let rows =[];
 rows.push(row0);
 
 for (var i = 0; i < cells.length; i++) {
-  let filename = cells[i].childNodes[1].src.split("/");
-  console.log(filename)
-  let row = [i+1, filename[filename.length-1]];
-  console.log(row)
-  rows.push(row);
+  for(var j = 1; j<cells[i].childNodes.length; j++){
+    let filename = cells[i].childNodes[j].src.split("/");
+      console.log(filename)
+    let row = [i+1, filename[filename.length-1]];
+    console.log(row)
+    rows.push(row);
+  }
   }
 
 let csvContent = "data:text/csv;charset=utf-8,";
