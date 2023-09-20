@@ -1,7 +1,7 @@
 # VisualDiamondRanking
 
 ## A free to use Diamond Ranking tool for qualitative interviews
-Please do use this tool for your studies! But if you do, please email me that you did and attribute the use of the tool in your paper to me. Feedback or questions are always welcome! I make a lot of these little tools for my visual research work at UW and I want to make them as usable for researchers from all over, especially folks who may not have as much as a technical background to dev out these types of softwares. 
+Please do use this tool for your studies! But if you do, please email me (ninalutz@uw.edu) that you did and attribute the use of the tool in your paper to me (Nina Lutz). Feedback or questions are always welcome! I make a lot of these little tools for my visual research work at UW and I want to make them as usable for researchers from all over, especially folks who may not have as much as a technical background to dev out these types of softwares. 
 
 ## How to use - with your own images
 1. Add your own images in a folder, i.e. "My Images". Your images should be numbered, named "1.png", "2.png", etc. You can see the "Person" folder for an example. 
