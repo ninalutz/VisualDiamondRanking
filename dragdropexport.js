@@ -11,11 +11,10 @@ function dragDrop(ev) {
   var data = ev.dataTransfer.getData("text");
   // ev.target.appendChild(document.getElementById(data));
   ev.currentTarget.appendChild(document.getElementById(data));
-
 }
 
 function exportData(){
-let cells = document.getElementsByClassName('div1');
+let cells = document.getElementsByClassName('pyramidbox');
 console.log(cells.length)
 
 let participant = document.getElementById("id").value;

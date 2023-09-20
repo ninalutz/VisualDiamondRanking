@@ -9,19 +9,19 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src = "dragdropexport.js"></script>
   <script>
-      function placeImage(x)
+    function placeImage(directory, numImages, fileType, imageWidth, imageHeight)
       {
           var div = document.getElementById("testbank");
 
           div.innerHTML = ""; // clear images
 
-          for (counter=1;counter<=x;counter++) {
+          for (counter=1;counter<=numImages;counter++) {
               var imagem=document.createElement("img");
-              imagem.src="Person/" + counter+".png";
+              imagem.src=directory + counter+fileType;
               imagem.id = "drag" + counter;
               imagem.draggable="true";
-              imagem.style.width="70px";
-              imagem.style.height="70px";
+              imagem.style.width=imageWidth + "px";
+              imagem.style.height=imageHeight + "px";
               div.appendChild(imagem);
               imagem.onload = function(event){
                     this.addEventListener('dragstart', dragStart, false);
@@ -30,11 +30,8 @@
       }
 
       window.onload = function() {
-          placeImage(50);
+          placeImage("Person/", 50, ".png", 65, 65);
       };
-
-      ;
-
   </script>
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
@@ -67,7 +64,7 @@
       vertical-align: middle;
     }
 
-    .div1 {
+    .pyramidbox {
         width: 70px;
         height: 70px;
         padding: 5px;
@@ -132,6 +129,8 @@
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-3 sidenav">
+      <p>Drag pictures from this bank to the tiles for your ranking. You can drag images from the pyramid back to this bank if you change your mind or need a hold.</p>
+
       <div class = "bank" id = "testbank" 
         ondrop="dragDrop(event)"
         ondragover="allowDrop(event)">
@@ -148,7 +147,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box1"
+                  <div class="pyramidbox" id = "box1"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -170,7 +169,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box2"
+                  <div class="pyramidbox" id = "box2"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -178,7 +177,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box3"
+                  <div class="pyramidbox" id = "box3"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -196,7 +195,7 @@
                 <div class = "col-sm-1">
                 </div>           
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box4"
+                  <div class="pyramidbox" id = "box4"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -204,7 +203,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box5"
+                  <div class="pyramidbox" id = "box5"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -212,7 +211,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box6"
+                  <div class="pyramidbox" id = "box6"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -226,7 +225,7 @@
                 <div class = "col-sm-1">
                 </div>        
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box7"
+                  <div class="pyramidbox" id = "box7"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -234,7 +233,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box8"
+                  <div class="pyramidbox" id = "box8"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -242,7 +241,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box9"
+                  <div class="pyramidbox" id = "box9"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -250,7 +249,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box10"
+                  <div class="pyramidbox" id = "box10"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -260,7 +259,7 @@
           </div>
           <div class = "row text-center">       
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box11"
+                  <div class="pyramidbox" id = "box11"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -268,7 +267,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box12"
+                  <div class="pyramidbox" id = "box12"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -276,7 +275,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box13"
+                  <div class="pyramidbox" id = "box13"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -284,7 +283,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box14"
+                  <div class="pyramidbox" id = "box14"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -292,7 +291,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box15"
+                  <div class="pyramidbox" id = "box15"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -301,7 +300,7 @@
           <hr>
           <div class = "row text-center">       
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box16"
+                  <div class="pyramidbox" id = "box16"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -309,7 +308,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box17"
+                  <div class="pyramidbox" id = "box17"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -317,7 +316,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box18"
+                  <div class="pyramidbox" id = "box18"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -325,7 +324,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box19"
+                  <div class="pyramidbox" id = "box19"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -333,7 +332,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box20"
+                  <div class="pyramidbox" id = "box20"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -343,7 +342,7 @@
                 <div class = "col-sm-1">
                 </div>        
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box21"
+                  <div class="pyramidbox" id = "box21"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -351,7 +350,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box22"
+                  <div class="pyramidbox" id = "box22"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -359,7 +358,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box23"
+                  <div class="pyramidbox" id = "box23"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -367,7 +366,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box24"
+                  <div class="pyramidbox" id = "box24"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -381,7 +380,7 @@
                 <div class = "col-sm-1">
                 </div>           
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box25"
+                  <div class="pyramidbox" id = "box25"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -389,7 +388,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box26"
+                  <div class="pyramidbox" id = "box26"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -397,7 +396,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box27"
+                  <div class="pyramidbox" id = "box27"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -415,7 +414,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box28"
+                  <div class="pyramidbox" id = "box28"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -423,7 +422,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box29"
+                  <div class="pyramidbox" id = "box29"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
@@ -445,7 +444,7 @@
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-1">
-                  <div class="div1" id = "box30"
+                  <div class="pyramidbox" id = "box30"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
