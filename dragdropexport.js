@@ -13,6 +13,44 @@ function dragDrop(ev) {
   ev.currentTarget.appendChild(document.getElementById(data));
 }
 
+function exportDataEmail(){
+let cells = document.getElementsByClassName('pyramidbox');
+console.log(cells.length)
+
+let participant = document.getElementById("id").value;
+
+let row0 = ["box", "imageName"];
+let rows =[];
+rows.push(row0);
+
+for (var i = 0; i < cells.length; i++) {
+  for(var j = 1; j<cells[i].childNodes.length; j++){
+    let filename = cells[i].childNodes[j].src.split("/");
+      console.log(filename)
+    let row = [i+1, filename[filename.length-1]];
+    console.log(row)
+    rows.push(row);
+  }
+  }
+
+let csvContent = "data:text/csv;charset=utf-8,";
+
+rows.forEach(function(rowArray) {
+    let line = rowArray.join(",");
+    csvContent += line + "\r\n";
+});
+
+var encodedUri = encodeURI(csvContent);
+var link = document.createElement("a");
+var ref = "mailto:ninalutz@uw.edu" + "?subject=CSV&body=" + csvContent;
+link.setAttribute("href", ref);
+document.body.appendChild(link); // Required for FF
+link.click();
+
+exportData();
+
+}
+
 function exportData(){
 let cells = document.getElementsByClassName('pyramidbox');
 console.log(cells.length)

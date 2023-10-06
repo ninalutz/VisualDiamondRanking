@@ -8,7 +8,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src = "dragdropexport.js"></script>
-
   <script>
     function placeImage(directory, numImages, fileType, imageWidth, imageHeight)
       {
@@ -31,10 +30,9 @@
       }
 
       window.onload = function() {
-          placeImage("FishDebugs/", 9, ".jpg", 170, 70);
+          placeImage("Person/", 50, ".png", 80, 80);
       };
   </script>
-
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
@@ -66,9 +64,8 @@
       vertical-align: middle;
     }
 
-    /* Change this if you want different pyramid tiles sizes */
     .pyramidbox {
-        width: 200px;
+        width: 100px;
         height: 100px;
         padding: 10px;
         border: 3px solid black;
@@ -112,8 +109,8 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class=""><a href="index.html">Home</a></li>
-        <li class="active"><a href="9pyramid.html">9 Pyramid</a></li>
-        <li class=""><a href="12pyramid.html">12 Pyramid</a></li>
+        <li class=""><a href="9pyramid.html">9 Pyramid</a></li>
+        <li class="active"><a href="12pyramid.html">12 Pyramid</a></li>
         <li class=""><a href="20pyramid.html">20 Pyramid</a></li>
         <li class=""><a href="30pyramid.html">30 Pyramid</a></li>
         <li class=""><a href="#"></a></li>
@@ -121,7 +118,7 @@
       <span class = "row">
        <label for="id" color = "white">Participant Identifier:</label>
       <input type="text" id="id" name="id">
-      <button onclick = "exportDataEmail()">Export data!</button>
+      <button onclick = "exportData()">Export data!</button>
     </span>
     </div>
   </div>
@@ -129,14 +126,15 @@
   
 <div class="container-fluid text-center">    
   <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <p>Drag pictures from this bank to the tiles for your ranking. You can drag images from the pyramid back to this bank if you change your mind or need a hold.</p>
+    <div class="col-sm-5 sidenav">
+            <p>Drag pictures from this bank to the tiles for your ranking. You can drag images from the pyramid back to this bank if you change your mind or need a hold.</p>
+
       <div class = "bank" id = "testbank" 
         ondrop="dragDrop(event)"
         ondragover="allowDrop(event)">
          </div>
     </div>
-    <div class="col-sm-10 text-center"> 
+    <div class="col-sm-7 text-center"> 
           <div class = "row text-center">
                 <div class = "col-sm-2">
                 </div>
@@ -172,8 +170,6 @@
                 </div>
                 <div class = "col-sm-2">
                 </div>
-                <div class = "col-sm-2">
-                </div>
           </div>
           <div class = "row text-center">
                 <div class = "col-sm-2">
@@ -198,12 +194,9 @@
                        ondragover="allowDrop(event)">
                   </div>
                 </div>
-                <div class = "col-sm-3">
-                </div>
           </div>
+          <hr>
           <div class = "row text-center">
-                <div class = "col-sm-2">
-                </div>
                 <div class = "col-sm-2">
                   <div class="pyramidbox" id = "box7"
                        ondrop="dragDrop(event)"
@@ -220,6 +213,32 @@
                 </div>
                 <div class = "col-sm-2">
                 </div>
+                <div class = "col-sm-2">
+                  <div class="pyramidbox" id = "box9"
+                       ondrop="dragDrop(event)"
+                       ondragover="allowDrop(event)">
+                  </div>
+                </div>
+          </div>
+          <div class = "row text-center">
+                <div class = "col-sm-2">
+                </div>
+                <div class = "col-sm-2">
+                  <div class="pyramidbox" id = "box10"
+                       ondrop="dragDrop(event)"
+                       ondragover="allowDrop(event)">
+                  </div>
+                </div>
+                <div class = "col-sm-2">
+                </div>
+                <div class = "col-sm-2">
+                  <div class="pyramidbox" id = "box11"
+                       ondrop="dragDrop(event)"
+                       ondragover="allowDrop(event)">
+                  </div>
+                </div>
+                <div class = "col-sm-2">
+                </div>
           </div>
           <div class = "row text-center">
                 <div class = "col-sm-2">
@@ -227,7 +246,7 @@
                 <div class = "col-sm-2">
                 </div>
                 <div class = "col-sm-2">
-                  <div class="pyramidbox" id = "box9"
+                  <div class="pyramidbox" id = "box12"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
                   </div>
