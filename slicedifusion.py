@@ -1,7 +1,7 @@
 import cv2
 
-directory = "Person/" #output directory
-filename = "Person/person.png" #image to cut
+directory = "GStudy/Gender/A woman/Africa/A Ghana woman/" #output directory
+filename = "../Ghana woman.png" #image to cut
 
 img = cv2.imread(filename)
 img2 = img
