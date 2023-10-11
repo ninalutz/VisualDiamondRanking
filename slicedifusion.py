@@ -31,7 +31,7 @@ def process_images(NAME):
             cv2.imwrite(directory + str(counter) +  ".png",img)
             img = img2
 
-names = ["Ghana person"]
+names = ["European person"]
 
 for n in names:
       process_images(n)
