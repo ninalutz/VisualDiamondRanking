@@ -3,8 +3,8 @@ import cv2
 
 
 def process_images(NAME):
-      directory = "../Gender/A woman/Latin America/" + NAME + "/" #output directory
-      filename = "../Gender/A woman/Latin America/" + NAME +".png" #image to cut
+      directory = "../Gender/A woman/North America/" + NAME + "/" #output directory
+      filename = "../Gender/A woman/North America/" + NAME +".png" #image to cut
 
       img = cv2.imread(filename)
       img2 = img
@@ -31,7 +31,7 @@ def process_images(NAME):
             cv2.imwrite(directory + str(counter) +  ".png",img)
             img = img2
 
-names = ["A Latin American woman", "A Colombian woman", "Argentina woman", "Brazilian woman", "Peruvian woman", "Venezuelan woman"]
+names = ["North American woman", "A Mexican woman", "A Canadian woman", "An American woman"]
 
 for n in names:
       process_images(n)
