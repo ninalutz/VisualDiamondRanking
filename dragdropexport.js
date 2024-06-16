@@ -101,10 +101,10 @@ function exportData(){
 
     for (var i = 0; i < cells.length; i++) {
           for (var j = 1; j<cells[i].childNodes.length-2; j++){
-            console.log("THING")
             console.log(cells[i].childNodes[j+2].src)
             var filename = cells[i].childNodes[j+2].src.split("/");
             let row = [i+1, filename[filename.length-1]];
+            console.log(row)
             rows.push(row);
           }
 
