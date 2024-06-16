@@ -92,7 +92,6 @@ function exportVideoData(){
 
 function exportData(){
     let cells = document.getElementsByClassName('pyramidbox');
-    console.log(cells.length)
 
     let participant = document.getElementById("id").value;
 
@@ -101,13 +100,14 @@ function exportData(){
     rows.push(row0);
 
     for (var i = 0; i < cells.length; i++) {
-      for(var j = 1; j<cells[i].childNodes.length; j++){
-        let filename = cells[i].childNodes[j].src.split("/");
-          console.log(filename)
-        let row = [i+1, filename[filename.length-1]];
-        console.log(row)
-        rows.push(row);
-      }
+          for (var j = 1; j<cells[i].childNodes.length-2; j++){
+            console.log("THING")
+            console.log(cells[i].childNodes[j+2].src)
+            var filename = cells[i].childNodes[j+2].src.split("/");
+            let row = [i+1, filename[filename.length-1]];
+            rows.push(row);
+          }
+
       }
 
     let csvContent = "data:text/csv;charset=utf-8,";

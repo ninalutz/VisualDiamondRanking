@@ -33,6 +33,64 @@
       window.onload = function() {
           placeImage("FishDebugs/", 9, ".jpg", 170, 70);
       };
+
+      function hideNumbers() {
+		  var x = document.getElementById("numID");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		  var x = document.getElementById("numID2");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		  var x = document.getElementById("numID3");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		  var x = document.getElementById("numID4");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		  var x = document.getElementById("numID5");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		  var x = document.getElementById("numID6");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		  var x = document.getElementById("numID7");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		  var x = document.getElementById("numID8");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		  var x = document.getElementById("numID9");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		}
+
   </script>
 
   <style>
@@ -122,6 +180,8 @@
        <label for="id" color = "white">Participant Identifier:</label>
       <input type="text" id="id" name="id">
       <button onclick = "exportData()">Export data!</button>
+
+      <button onclick="hideNumbers()">Numbers On/Off</button>
     </span>
     </div>
   </div>
@@ -146,6 +206,8 @@
                   <div class="pyramidbox" id = "box1"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
+                       <p id = "numID">1</p>
+
                   </div>
                 </div>
                 <div class = "col-sm-2">
@@ -160,6 +222,8 @@
                   <div class="pyramidbox" id = "box2"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
+                       <p id = "numID2">2</p>
+
                   </div>
                 </div>
                 <div class = "col-sm-2">
@@ -168,6 +232,7 @@
                   <div class="pyramidbox" id = "box3"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
+                       <p id = "numID3">3</p>
                   </div>
                 </div>
                 <div class = "col-sm-2">
@@ -180,6 +245,7 @@
                   <div class="pyramidbox" id = "box4"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
+                       <p id = "numID4">4</p>
                   </div>
                 </div>
                 <div class = "col-sm-2">
@@ -188,6 +254,7 @@
                   <div class="pyramidbox" id = "box5"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
+                       <p id = "numID5">5</p>
                   </div>
                 </div>
                 <div class = "col-sm-2">
@@ -196,6 +263,7 @@
                   <div class="pyramidbox" id = "box6"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
+                       <p id = "numID6">6</p>
                   </div>
                 </div>
                 <div class = "col-sm-3">
@@ -208,6 +276,7 @@
                   <div class="pyramidbox" id = "box7"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
+                       <p id = "numID7">7</p>
                   </div>
                 </div>
                 <div class = "col-sm-2">
@@ -216,6 +285,7 @@
                   <div class="pyramidbox" id = "box8"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
+                       <p id = "numID8">8</p>
                   </div>
                 </div>
                 <div class = "col-sm-2">
@@ -230,6 +300,7 @@
                   <div class="pyramidbox" id = "box9"
                        ondrop="dragDrop(event)"
                        ondragover="allowDrop(event)">
+                       <p id = "numID9">9</p>
                   </div>
                 </div>
                 <div class = "col-sm-2">
